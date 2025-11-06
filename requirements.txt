@@ -10,3 +10,4 @@ requests
 streamlit
 wikipedia
 langchain-huggingface
+sentence-transformers
