@@ -2,6 +2,8 @@
 
 from langgraph.graph import StateGraph, START, END
 from src.state.rag_state import RAGState
+from src.nodes.nodes import RAGNodes
+
 
 class GraphBuilder:
     """Build and manges the langgraph workflow."""
@@ -11,7 +13,7 @@ class GraphBuilder:
         Args: 
             retriever: The document retriever object.
             llm: language model object."""
-        self.nodes= None
+        self.nodes= RAGNodes()
         self.graph = None
     
 
@@ -32,3 +34,16 @@ class GraphBuilder:
         self.graph = builder.compile()
 
         return self.graph
+    
+    def run(self, question: str)->dict:
+        """Run the graph with the given question.
+        Args:
+            question: The input question string.
+        
+            Returns: The final answer dictionary."""
+        
+        if self.graph is None:
+            self.build()
+        
+        initial_state = RAGState(question=question)
+        return self.graph.invoke(initial_state)
