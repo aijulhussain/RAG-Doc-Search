@@ -11,3 +11,4 @@ streamlit
 wikipedia
 langchain-huggingface
 sentence-transformers
+pypdf

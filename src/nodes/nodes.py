@@ -1,6 +1,7 @@
 """Langgraph nodes for RAG"""
 
 from src.state.rag_state import RAGState
+from src.config.config import Config
 
 
 class RAGNodes:
@@ -12,7 +13,7 @@ class RAGNodes:
             retriever: The document retriever object.
             llm: language model object."""
         self.retriever = retriever
-        self.llm = llm  
+        self.llm = llm
 
     
     def retriever_docs(self, state: RAGState) -> RAGState:

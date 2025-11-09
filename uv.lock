@@ -1975,6 +1975,15 @@ wheels = [
 ]
 
 [[package]]
+name = "pypdf"
+version = "6.2.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/4e/2b/8795ec0378384000b0a37a2b5e6d67fa3d84802945aa2c612a78a784d7d4/pypdf-6.2.0.tar.gz", hash = "sha256:46b4d8495d68ae9c818e7964853cd9984e6a04c19fe7112760195395992dce48", size = 5272001, upload-time = "2025-11-09T11:10:41.911Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/de/ba/743ddcaf1a8fb439342399645921e2cf2c600464cba5531a11f1cc0822b6/pypdf-6.2.0-py3-none-any.whl", hash = "sha256:4c0f3e62677217a777ab79abe22bf1285442d70efabf552f61c7a03b6f5c569f", size = 326592, upload-time = "2025-11-09T11:10:39.941Z" },
+]
+
+[[package]]
 name = "python-dateutil"
 version = "2.9.0.post0"
 source = { registry = "https://pypi.org/simple" }
@@ -2072,6 +2081,7 @@ dependencies = [
     { name = "langchain-huggingface" },
     { name = "langgraph" },
     { name = "pydantic" },
+    { name = "pypdf" },
     { name = "python-dotenv" },
     { name = "requests" },
     { name = "sentence-transformers" },
@@ -2089,6 +2099,7 @@ requires-dist = [
     { name = "langchain-huggingface", specifier = ">=1.0.1" },
     { name = "langgraph", specifier = ">=1.0.1" },
     { name = "pydantic", specifier = ">=2.12.3" },
+    { name = "pypdf", specifier = ">=6.2.0" },
     { name = "python-dotenv", specifier = ">=1.2.1" },
     { name = "requests", specifier = ">=2.32.5" },
     { name = "sentence-transformers", specifier = ">=5.1.2" },
